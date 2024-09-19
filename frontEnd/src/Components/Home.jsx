@@ -34,7 +34,7 @@ function Home() {
                                 <td>{users.telefone}</td>
                                 <td>{users.email}</td>
                                 <td>
-                                    <button className="btn btn-sm btn-info">Ver</button>
+                                    <Link to={`/read/${users.id_user}`} className="btn btn-sm btn-info">Ver</Link>
                                     <button className="btn btn-sm btn-primary mx-2">Editar</button>
                                     <button className="btn btn-sm btn-danger">Deletar</button>
                                 </td>
