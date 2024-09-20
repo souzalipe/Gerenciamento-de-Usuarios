@@ -66,6 +66,9 @@ Este projeto full-stack crud que tem como objetivo criar gerenciador de usuário
 
 - npm run dev
 
+## Executando Banco de Dados  &#x27A1;
+
+
 ## Endpoints
 
 ## *Mostras usuários*
