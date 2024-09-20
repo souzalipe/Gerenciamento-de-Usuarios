@@ -38,6 +38,7 @@ function Create(){
                         <input type="email" placeholder="Email" className="form-control" 
                         onChange={e => setValues({...values, email: e.target.value})}/>
                     </div>
+                    <Link to="/" className="btn btn-primary me-2">Voltar</Link>
                     <button className="btn btn-success mt-2 mb-2">Enviar</button>
                 </form>
             </div>

@@ -36,7 +36,7 @@ function Read() {
         <h2>Telefone: {users[0].telefone}</h2>
         <h2>Email: {users[0].email}</h2>
         <Link to="/" className="btn btn-primary me-2">Voltar</Link>
-        <Link to={`/edit/${users.id_user}`} className="btn btn-info">Editar</Link>
+        
       </div>
     </div>
   );
