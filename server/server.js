@@ -54,6 +54,16 @@ app.put('/update/:id', (req, res) => { // CORREÇÃO: ordem correta dos parâmet
     });
 });
 
+app.delete('/delete/:id',(req,res)=>{
+    const sql = "DELETE FROM users WHERE id_user =?";
+    const id = req.params.id;
+
+    db.query(sql,  [id], (err, result) => {
+        if (err) return res.json({Message: "Error inside server"});
+        return res.json(result);
+    });
+})
+
 app.listen(8081, () => {
     console.log("Start Application");
 });
