@@ -75,7 +75,7 @@ Este projeto utiliza um banco de dados MySQL chamado **crud**. O arquivo para im
 Antes de importar o banco de dados, certifique-se de que você tem os seguintes itens instalados e configurados:
 
 - MySQL instalado (versão mínima 5.7)
-- Acesso ao MySQL via terminal (ou Command Line Interface - CLI)
+- Acesso ao MySQL via terminal 
 - O arquivo `.sql` do banco de dados (disponível na pasta `/DataBase` do repositório)
 
 ## Instruções para Importar via Terminal
