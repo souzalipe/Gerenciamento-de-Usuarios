@@ -31,17 +31,17 @@ function Update() {
       }, [id]);
 
     const handleUpdate = (event) => {
-        event.preventDefault(); // CORREÇÃO: erro de digitação aqui
-        axios.put(`http://localhost:8081/update/${id}`, values) // CORREÇÃO: rota PUT correta
+        event.preventDefault(); 
+        axios.put(`http://localhost:8081/update/${id}`, values) 
         .then(res => {
             console.log(res);
-            navigate("/"); // Redireciona para a página inicial após a atualização
+            navigate("/"); 
         })
         .catch(err => console.log(err));
     };
 
     return (
-        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center"> {/* Correção em align-items-center */}
+        <div className="d-flex vh-100 bg-primary justify-content-center align-items-center"> 
             <div className="w-50 h-50 bg-white rounded p-3">
                 <form onSubmit={handleUpdate}>
                     <h2>Edição de Usuário</h2>
