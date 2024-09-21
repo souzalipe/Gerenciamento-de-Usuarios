@@ -1,6 +1,6 @@
 ## Gerenciamento de Usuários 👩🏾👨🏾
 
-Este projeto tem como objetivo criar uma API para gerenciar e visualizar dados estatísticos de países, incluindo índices de fome, desigualdade social e escolaridade. A API permite a inserção, consulta, exclusão e listagem dessas estatísticas.
+Este projeto full-stack crud que tem como objetivo criar gerenciador de usuários podendo adicionar, editar e deletar um usuário.
 
 ### Estrutura de Arquivos 📄
 
@@ -23,25 +23,34 @@ Este projeto tem como objetivo criar uma API para gerenciar e visualizar dados e
 ```
 
 
-## Pré-requisitos 🔧
+## Tecnologias 🔧
 
-- Node.js
-- NPM (Node Package Manager)
+- ⚛️ React.js
+- 📦 Node.js
+- 🐬 MySql 
 
 ## Instalação 🛠
 
 1. Clone o repositório:
 
    ```
-   git clone https://github.com/souzalipe/Api_Estatisticas_De_Paises
+   git clone https://github.com/souzalipe/Mini-projeto-m5
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```
-   cd Api_Estatisticas_De_Paises
+   cd Mini-projeto-m5
    ```
    
+   ```
+   cd frontEnd
+   ```
+
+   ```
+   cd sever
+   ```
+
 3. Instale as dependências:
 
    ```
@@ -49,103 +58,129 @@ Este projeto tem como objetivo criar uma API para gerenciar e visualizar dados e
    ```
 
 
-## Executando a Aplicação &#x27A1;
+## Executando a Aplicação *SEVER( BACK-END )* &#x27A1;
 
 - npm start
 
+## Executando a Aplicação *fronEnd* &#x27A1;
+
+- npm run dev
+
+## Executando Banco de Dados  &#x27A1;
+
+
 ## Endpoints
 
-## *Inserir Estatística*
+## *Mostras usuários*
 
-- Rota: POST /estatistica/inserir
-- Descrição: Insere uma nova estatística de um país.
+- Rota: GET /
+- Descrição: Mostra os usários ja cadastrados.
 - Corpo da Requisição: json
 
-```
-{
-  "pais": "Nome do País",
-  "fome_indice": valor,
-  "desigualdade_social": valor,
-  "escolaridade_indice": valor
-}
-```
+   ```
+   {
+     "nome": "valor",
+     "telefone": valor,
+     "email": valor,
+   }
+   ```
 
 - Resposta: 
 
-```
-{
-  "novaEstatistica": {
-    "id": auto_increment_id,
-    "pais": "Nome do País",
-    "fome_indice": valor,
-    "desigualdade_social": valor,
-    "escolaridade_indice": valor
-  }
-}
-```
+   ```
+   [
+     {
+       "id_user": 1,
+       "nome": "João Silva",
+       "telefone": "99999-9999",
+       "email": "joao@example.com"
+     },
+     {
+       "id_user": 2,
+       "nome": "Maria Souza",
+       "telefone": "88888-8888",
+       "email": "maria@example.com"
+     }
+   ]
+   
+   ```
 
-## *Listar Estatísticas*
+## *Adicionar usuário*
 
-- Rota: GET /estatistica
-- Descrição: Lista todas as estatísticas cadastradas
+- Rota: POST /user
+- Descrição: Adiciona um novo usuário
+- Corpo da Requisição:
+   ```
+   {
+     "nome": "Nome do Usuário",
+     "telefone": "Telefone do Usuário",
+     "email": "Email do Usuário"
+   }
+   
+   ```
 - Resposta:
-```
-"listar": [
-    {
-      "id": auto_increment_id,
-      "pais": "Nome do País",
-      "fome_indice": valor,
-      "desigualdade_social": valor,
-      "escolaridade_indice": valor
-    },
-    ...
-  ]
-```
 
-## *Buscar Estatística por País*
+   ```
+   {
+  "affectedRows": 1,
+  "insertId": 3,
+  "message": "Usuário adicionado com sucesso!"
+   }
+   ```
 
-- Rota: GET /estatistica/pais/:pais
-- Descrição: Retorna as estatísticas de um país específico.
+## *Buscar usuário por id*
+
+- Rota: GET /read/:id
+- Descrição: Retorna as um usuário com o id.
 - Resposta:
-```
-{
-  "id": auto_increment_id,
-  "pais": "Nome do País",
-  "fome_indice": valor,
-  "desigualdade_social": valor,
-  "escolaridade_indice": valor
-}
-```
+   ```
+   {
+     "id_user": 1,
+     "nome": "João Silva",
+     "telefone": "99999-9999",
+     "email": "joao@example.com"
+   }
+   
+   ```
 
-## *Buscar Estatística por ID*
+## *Atualizar usuário*
 
-- Rota: GET /estatistica/:id
-- Descrição: Retorna as estatísticas de um país específico pelo ID.
+- Rota: PUT /update/:id
+- Descrição: Atualiza usuário com base no id.
+- Corpo da requisição:
+   ```
+   {
+     "nome": "Nome Atualizado",
+     "telefone": "Telefone Atualizado",
+     "email": "Email Atualizado"
+   }
+   
+   ```
 - Resposta:
-```
-{
-  "id": auto_increment_id,
-  "pais": "Nome do País",
-  "fome_indice": valor,
-  "desigualdade_social": valor,
-  "escolaridade_indice": valor
-}
-```
+   ```
+   {
+     "affectedRows": 1,
+     "message": "Usuário atualizado com sucesso!"
+   }
 
-## *Excluir Estatística*
+   
+   ```
 
-- Rota: DELETE /estatistica/:id
-- Descrição: Exclui uma estatística pelo ID.
+
+## *Excluir usuário*
+
+- Rota: DELETE /delete/:id
+- Descrição: Exclui um usuário pelo ID.
 - Resposta:
-```
-{
-  "id": auto_increment_id,
-  "pais": "Nome do País",
-  "fome_indice": valor,
-  "desigualdade_social": valor,
-  "escolaridade_indice": valor
-}
-```
+   ```
+   {
+     "id_user": 1,
+     "nome": "João Silva",
+     "telefone": "99999-9999",
+     "email": "joao@example.com"
+   }
+   
+   ```
 
 ## Contribuindo
 
