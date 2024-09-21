@@ -66,9 +66,42 @@ Este projeto full-stack crud que tem como objetivo criar gerenciador de usuário
 
 - npm run dev
 
-## Executando Banco de Dados  &#x27A1;
+# Importando o Banco de Dados 
 
+Este projeto utiliza um banco de dados MySQL chamado **crud**. O arquivo para importação está localizado na pasta `DataBase` do repositório. Siga as instruções abaixo para importar o banco de dados corretamente via terminal.
 
+## Pré-requisitos
+
+Antes de importar o banco de dados, certifique-se de que você tem os seguintes itens instalados e configurados:
+
+- MySQL instalado (versão mínima 5.7)
+- Acesso ao MySQL via terminal (ou Command Line Interface - CLI)
+- O arquivo `.sql` do banco de dados (disponível na pasta `/DataBase` do repositório)
+
+## Instruções para Importar via Terminal
+
+1. Abra o terminal e conecte-se ao MySQL:
+   ```bash
+   mysql -u seu_usuario -p
+
+2.Crie o banco de dados com o nome crud:
+
+```
+CREATE DATABASE crud;
+```
+
+3.Importe o arquivo .sql para o banco de dados:
+
+```
+mysql -u seu_usuario -p crud < caminho_para_o_arquivo/DataBase/crud.sql
+```
+
+4.Verifique se o banco foi importado corretamente:
+
+```
+USE crud;
+SHOW TABLES;
+```
 ## Endpoints
 
 ## *Mostras usuários*
