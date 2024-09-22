@@ -1,3 +1,4 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=499a00&height=120&section=header"/>
 ## Gerenciamento de Usuários 👩🏾👨🏾
 
 Este projeto full-stack crud que tem como objetivo criar gerenciador de usuários podendo adicionar, editar e deletar um usuário.
@@ -228,3 +229,4 @@ Se desejar contribuir com o projeto, siga os passos abaixo:
 ## Licença
 
 © *Felipe Nascimento de Souza*. 
+<img  width=100% src="https://capsule-render.vercel.app/api?type=waving&color=499a00&height=120&section=footer"/>
