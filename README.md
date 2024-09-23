@@ -6,19 +6,40 @@ Este projeto full-stack crud que tem como objetivo criar gerenciador de usuário
 
 
 ```
-├── src
-│ ├── controller
-│ │ └── estatistica.controller.js
-│ ├── model
-│ │ └── estatisticas.model.js
-│ ├── routes
-│ │ └── estatistica.router.js
-│ └── server.js
-├── .gitignore
-├── package-lock.json
-├── package.json
+MINI-PROJETO-M5
+│
+├── DataBase
+│   └── crud.sql
+│
+├── frontEnd
+│   ├── node_modules
+│   ├── public
+│   └── src
+│       ├── assets
+│       ├── Components
+│       │   ├── Create.jsx
+│       │   ├── Edit.jsx
+│       │   ├── Home.jsx
+│       │   ├── Read.jsx
+│       ├── App.css
+│       ├── App.jsx
+│       ├── index.css
+│       ├── main.jsx
+│   ├── .gitignore
+│   ├── index.html
+│   ├── eslint.config.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── vite.config.js
+│
+├── server
+│   ├── node_modules
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── server.js
+│
 └── README.md
-
 
 ```
 
